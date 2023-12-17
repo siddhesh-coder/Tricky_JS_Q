@@ -1,3 +1,26 @@
+Note:
+//diff Q
+
+console.log("start");
+
+const promise = new Promise((resolve, reject)=>{
+    console.log(`${2} I am not async`);
+    resolve(`${4} I log last because I am async, you must know event loop to understand me`);
+})
+.then(res => console.log(res));
+   
+console.log("end");
+
+//output well be 
+/*
+start
+2
+end
+
+because console.log(2) is not async, though it is under promise it is a sync thats why.*/
+
+
+
 //Q 1
 /*In JavaScript, variable declarations using the var keyword are hoisted 
 to the top of their containing scope during the compilation phase. 
