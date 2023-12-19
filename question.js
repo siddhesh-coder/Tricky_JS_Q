@@ -210,3 +210,29 @@ const object = Object.create({
 console.log(object.value);
 delete object.value;
 console.log(object.value);
+
+//PhonePe interview Quetion on object
+
+//shallow copy
+const person1 = {
+  name: "dummy1",
+  address: {
+    line1: "Pune",
+    line2: "Banglore",
+  },
+};
+
+//const person2 = { ...person1 };
+
+//How to pervent shallow copy
+const person2 = JSON.parse(JSON.stringify({ ...person1 }));
+
+person1.name = "anil";
+person1.address.line1 = "goa";
+
+console.log(person1);
+console.log(person2);
+
+
+
+
