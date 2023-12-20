@@ -233,6 +233,23 @@ person1.address.line1 = "goa";
 console.log(person1);
 console.log(person2);
 
+//this keyword Question
 
+var length = 10;
+function fn(){
+  console.log(this.length);
+}
+var obj = {
+  length: 5,
+  method: function (fn){
+    fn();
+    arguments[0]();
+  },
+};
+obj.method(fn, 1);
+
+//output will be 10 2
+
+//! note: Node doesnt have a this context in global scope. Browser has this == window in global scope, so it will give you correct output in browser.
 
 
