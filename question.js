@@ -252,4 +252,15 @@ obj.method(fn, 1);
 
 //! note: Node doesnt have a this context in global scope. Browser has this == window in global scope, so it will give you correct output in browser.
 
+var a = 10;
+const obj = {
+  a: 13,
+  geta: function () {
+    function inner() {
+      console.log(this.a);
+    }
+  },
+};
+obj.geta();
+console.log(a);
 
