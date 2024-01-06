@@ -264,3 +264,24 @@ const obj = {
 obj.geta();
 console.log(a);
 
+//How to make try catch wrapper class
+
+function wrapper(fn) {
+  return function (...args) {
+    try {
+      return fn(...args);
+    } catch (error) {
+      return "Error";
+    }
+  };
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+const wrapperOne = wrapper(add);
+
+const res = wrapperOne(3, 5);
+console.log(res);
+
