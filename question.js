@@ -285,3 +285,13 @@ const wrapperOne = wrapper(add);
 const res = wrapperOne(3, 5);
 console.log(res);
 
+//Strict Mode is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a "strict" operating context. This strict context prevents certain actions from being taken and throws more exceptions.
+// Non-strict code...
+
+(function(){
+  "use strict";
+
+  // Define your library strictly...
+})();
+
+// Non-strict code...
