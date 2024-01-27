@@ -294,4 +294,10 @@ console.log(res);
   // Define your library strictly...
 })();
 
-// Non-strict code...
+//Question 6: Mutation and Immutability
+const obj = { prop: 'old' };
+const arr = [obj];
+
+obj.prop = 'new';
+console.log(arr[0].prop);
+//Answer: The output will be 'new'.
