@@ -301,3 +301,18 @@ const arr = [obj];
 obj.prop = 'new';
 console.log(arr[0].prop);
 //Answer: The output will be 'new'.
+
+function outer() {
+  let outerVar = "I am from outer function!";
+  
+  function inner() {
+    let innerVar = "I am from inner function!";
+    console.log(outerVar);  // I can access outerVar!
+    console.log(innerVar);  // I can access innerVar!
+  }
+  
+  return inner;
+}
+
+const myClosure = outer();
+myClosure();  // Outputs: "I am from outer function!" and "I am from inner function!"
