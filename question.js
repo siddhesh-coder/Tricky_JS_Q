@@ -316,3 +316,21 @@ function outer() {
 
 const myClosure = outer();
 myClosure();  // Outputs: "I am from outer function!" and "I am from inner function!"
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  return { name: "siddhesh" };
+}
+
+const person1 = new Person("yash", 23);
+console.log(person1);
+
+function PersonObj(name, age) {
+  this.name = name;
+  this.age = age;
+  return "Learn JS";
+}
+
+const person2 = new PersonObj("yash", 23);
+console.log(person2);
