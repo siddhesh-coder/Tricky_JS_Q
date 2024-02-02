@@ -334,3 +334,18 @@ function PersonObj(name, age) {
 
 const person2 = new PersonObj("yash", 23);
 console.log(person2);
+
+function outer() {
+  let outerVar = "I am from outer function!";
+  
+  function inner() {
+    let innerVar = "I am from inner function!";
+    console.log(outerVar);  // I can access outerVar!
+    console.log(innerVar);  // I can access innerVar!
+  }
+  
+  return inner;
+}
+
+const myClosure = outer();
+myClosure();  // Outputs: "I am from outer function!" and "I am from inner function!"
